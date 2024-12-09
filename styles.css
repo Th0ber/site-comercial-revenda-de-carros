@@ -1,0 +1,32 @@
+.bi-facebook {
+    font-size: 70px;
+}
+
+.bi-geo-alt-fill {
+    font-size: 20px;
+}
+
+.bi-telephone-fill {
+    font-size: 20px;
+}
+
+.bi-envelope {
+    font-size: 20px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+}

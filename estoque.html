@@ -7,6 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .highlight {
+            animation: highlight-animation 2s ease-in-out;
+        }
+
+        @keyframes highlight-animation {
+            0% {
+                background-color: #a9b9da;
+            }
+
+            100% {
+                background-color: #f0f0f0;
+            }
+        }
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
@@ -40,7 +56,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-4 d-flex justify-content-center">
+                <div id="s10-2013" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
@@ -94,11 +110,40 @@
                             <div class="d-flex justify-content-center">
                                 <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
                             </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink10()">Copiar link de compartilhamento
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink10() {
+                        const url = window.location.origin + window.location.pathname + '#s10-2013';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Chevrolet S10 2013',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="passat-tsi-2015" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
@@ -152,11 +197,40 @@
                             <div class="d-flex justify-content-center">
                                 <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
                             </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink11()">Copiar link de compartilhamento
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink11() {
+                        const url = window.location.origin + window.location.pathname + '#passat-tsi-2015';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Volkswagen Passat Tsi 2015',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="saveiro-2009" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
@@ -210,11 +284,40 @@
                             <div class="d-flex justify-content-center">
                                 <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
                             </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink12()">Copiar link de compartilhamento
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink12() {
+                        const url = window.location.origin + window.location.pathname + '#saveiro-2009';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Saveiro 2009',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="s10-1997" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
@@ -263,9 +366,38 @@
                             <div class="d-flex justify-content-center">
                                 <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
                             </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink13()">Copiar link de compartilhamento
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    function compartilharLink13() {
+                        const url = window.location.origin + window.location.pathname + '#s10-1997';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Chevrolet S10 1997',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
 
                 <div class="modal fade" id="zoomModal" tabindex="-1" aria-labelledby="zoomModalLabel"
                     aria-hidden="true">
@@ -319,6 +451,19 @@
                 zoomImage.src = event.target.src;
                 const zoomModal = new bootstrap.Modal(document.getElementById('zoomModal'));
                 zoomModal.show();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.classList.add('highlight');
+                    setTimeout(() => {
+                        targetElement.classList.remove('highlight');
+                    }, 2000);
+                }
             }
         });
     </script>

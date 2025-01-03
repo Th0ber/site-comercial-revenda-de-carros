@@ -8,6 +8,22 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .highlight {
+            animation: highlight-animation 2s ease-in-out;
+        }
+
+        @keyframes highlight-animation {
+            0% {
+                background-color: #a9b9da;
+            }
+
+            100% {
+                background-color: #f0f0f0;
+            }
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -46,72 +62,96 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-4 d-flex justify-content-center">
+                <div id="focus-sedan-2008" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
                         <div class="card-body">
                             <h3 class="card-title fs-2" style="color: #003375;">Focus Sedan 2008</h3>
-
-                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 1.6 de 8 válvulas, com pacote
-                                completo de itens de conforto e segurança: ar-condicionado, vidros elétricos, direção
-                                assistida, airbags, sistema de som, travas elétricas e rodas de liga leve.</h6>
-
-                            <div id="carouselFocus1" class="carousel slide mt-3">
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">
+                                Motor 1.6 de 8 válvulas, com pacote completo de itens de conforto e segurança:
+                                ar-condicionado, vidros elétricos, direção assistida, airbags, sistema de som, travas
+                                elétricas e rodas de liga leve.
+                            </h6>
+                            <div id="carouselFocus1" class="carousel slide mt-3" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="./focus sedan 2008/focus sedan 2008.jpeg"
                                             class="d-block w-100 carousel-image" alt="Imagem 1 do Focus Sedan 2008">
                                     </div>
-
                                     <div class="carousel-item">
                                         <img src="./focus sedan 2008/focus sedan 2008 2.jpeg"
                                             class="d-block w-100 carousel-image" alt="Imagem 2 do Focus Sedan 2008">
                                     </div>
-
                                     <div class="carousel-item">
                                         <img src="./focus sedan 2008/focus sedan 2008 3.jpeg"
                                             class="d-block w-100 carousel-image" alt="Imagem 3 do Focus Sedan 2008">
                                     </div>
-
                                     <div class="carousel-item">
                                         <img src="./focus sedan 2008/focus sedan 2008 4.jpeg"
                                             class="d-block w-100 carousel-image" alt="Imagem 4 do Focus Sedan 2008">
                                     </div>
-
                                     <div class="carousel-item">
                                         <img src="./focus sedan 2008/focus sedan 2008 5.jpeg"
                                             class="d-block w-100 carousel-image" alt="Imagem 5 do Focus Sedan 2008">
                                     </div>
-
                                     <div class="carousel-item">
                                         <img src="./focus sedan 2008/focus sedan 2008 6.jpeg"
                                             class="d-block w-100 carousel-image" alt="Imagem 6 do Focus Sedan 2008">
                                     </div>
                                 </div>
-
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselFocus1"
                                     data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Anterior</span>
                                 </button>
-
                                 <button class="carousel-control-next" type="button" data-bs-target="#carouselFocus1"
                                     data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Próximo</span>
                                 </button>
                             </div>
+                            <div class="d-flex justify-content-center">
+                                <a href="https://wa.me/+555591562443" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse</button>
+                                </a>
+                            </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink1()">Copiar link de compartilhamento</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink1() {
+                        const url = window.location.origin + window.location.pathname + '#focus-sedan-2008';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Focus Sedan 2008',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+
+                <div id="volkswagen-amarok-2016" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
@@ -171,21 +211,54 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse</button>
+                                </a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink2()">Copiar link de compartilhamento</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <script>
+                    function compartilharLink2() {
+                        const url = window.location.origin + window.location.pathname + '#volkswagen-amarok-2016';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Volkswagen Amarok 2016',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
 
-                <div class="col-md-4 d-flex justify-content-center">
+
+                <div id="toyota-hilux-2013" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
                         <div class="card-body">
-                            <h3 class="card-title fs-2" style="color: #003375;">Toyota Hilux SRV 4x4 Automática 2013</h3>
+                            <h3 class="card-title fs-2" style="color: #003375;">Toyota Hilux SRV 4x4 Automática 2013
+                            </h3>
 
-                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 3.0 diesel, bancos de couro, tração 4x4 e 158 mil km.</h6>
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 3.0 diesel, bancos de couro,
+                                tração 4x4 e 158 mil km.</h6>
 
                             <div id="carouselFocus3" class="carousel slide mt-3">
                                 <div class="carousel-inner">
@@ -229,20 +302,51 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button"
+                                        class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink3()">Copiar link de compartilhamento
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink3() {
+                        const url = window.location.origin + window.location.pathname + '#toyota-hilux-2013';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Toyota Hilux 2013',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="montana-2013" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
                         <div class="card-body">
                             <h3 class="card-title fs-2" style="color: #003375;">Montana 2013</h3>
 
-                            <h6 class="card-subtitle fs-5" style="color: #003375;">Com direção hidráulica, Modelo lt e Motor 1.4</h6>
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Com direção hidráulica, Modelo lt e
+                                Motor 1.4</h6>
 
                             <div id="carouselFocus4" class="carousel slide mt-3">
                                 <div class="carousel-inner">
@@ -282,41 +386,72 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button"
+                                        class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink4()">Copiar link de compartilhamento
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink4() {
+                        const url = window.location.origin + window.location.pathname + '#montana-2013';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Montana 2013',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="picap-1972" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
                         <div class="card-body">
                             <h3 class="card-title fs-2" style="color: #003375;">Picap 1972</h3>
 
-                            <h6 class="card-subtitle fs-5" style="color: #003375;">Modelo f75, Motor 6cc e Caixa original</h6>
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Modelo f75, Motor 6cc e Caixa
+                                original</h6>
 
                             <div id="carouselFocus5" class="carousel slide mt-3">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./Picap 1972/Picap 1972 1.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 1">
+                                        <img src="./Picap 1972/Picap 1972 1.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 1">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./Picap 1972/Picap 1972 2.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 2">
+                                        <img src="./Picap 1972/Picap 1972 2.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 2">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./Picap 1972/Picap 1972 3.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 3">
+                                        <img src="./Picap 1972/Picap 1972 3.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 3">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./Picap 1972/Picap 1972 4.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 4">
+                                        <img src="./Picap 1972/Picap 1972 4.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 4">
                                     </div>
 
                                 </div>
@@ -335,13 +470,43 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button"
+                                        class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink5()">Copiar link de compartilhamento
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink5() {
+                        const url = window.location.origin + window.location.pathname + '#picap-1972';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Picap 1972',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="fiesta-2011" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
@@ -353,23 +518,23 @@
                             <div id="carouselFocus6" class="carousel slide mt-3">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./fiesta 2011/fiesta 2011 1.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 1">
+                                        <img src="./fiesta 2011/fiesta 2011 1.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 1">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./fiesta 2011/fiesta 2011 2.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 2">
+                                        <img src="./fiesta 2011/fiesta 2011 2.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 2">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./fiesta 2011/fiesta 2011 3.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 3">
+                                        <img src="./fiesta 2011/fiesta 2011 3.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 3">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./fiesta 2011/fiesta 2011 4.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 4">
+                                        <img src="./fiesta 2011/fiesta 2011 4.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 4">
                                     </div>
 
                                 </div>
@@ -388,41 +553,72 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button"
+                                        class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink6()">Copiar link de compartilhamento
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink6() {
+                        const url = window.location.origin + window.location.pathname + '#fiesta-2011';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Fiesta 2011',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="corsa-2006" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
                         <div class="card-body">
                             <h3 class="card-title fs-2" style="color: #003375;">Corsa 2006</h3>
 
-                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 1.8, Com ar condicionado e Modelo Max</h6>
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 1.8, Com ar condicionado e
+                                Modelo Max</h6>
 
                             <div id="carouselFocus7" class="carousel slide mt-3">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./corsa 2006/corsa 2006 1.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 1">
+                                        <img src="./corsa 2006/corsa 2006 1.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 1">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./corsa 2006/corsa 2006 2.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 2">
+                                        <img src="./corsa 2006/corsa 2006 2.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 2">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./corsa 2006/corsa 2006 3.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 3">
+                                        <img src="./corsa 2006/corsa 2006 3.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 3">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./corsa 2006/corsa 2006 4.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 4">
+                                        <img src="./corsa 2006/corsa 2006 4.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 4">
                                     </div>
 
                                 </div>
@@ -441,13 +637,43 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button"
+                                        class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink7()">Copiar link de compartilhamento
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink7() {
+                        const url = window.location.origin + window.location.pathname + '#corsa-2006';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Corsa 2006',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="meriva-2004" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
@@ -459,23 +685,23 @@
                             <div id="carouselFocus8" class="carousel slide mt-3">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./meriva 2004/meriva 2004 1.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 1">
+                                        <img src="./meriva 2004/meriva 2004 1.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 1">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./meriva 2004/meriva 2004 2.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 2">
+                                        <img src="./meriva 2004/meriva 2004 2.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 2">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./meriva 2004/meriva 2004 3.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 3">
+                                        <img src="./meriva 2004/meriva 2004 3.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 3">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./meriva 2004/meriva 2004 4.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 4">
+                                        <img src="./meriva 2004/meriva 2004 4.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 4">
                                     </div>
 
                                 </div>
@@ -494,46 +720,77 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button"
+                                        class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink8()">Copiar link de compartilhamento
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 d-flex justify-content-center">
+                <script>
+                    function compartilharLink8() {
+                        const url = window.location.origin + window.location.pathname + '#meriva-2004';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Meriva 2004',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div id="corsa-hatch-2001" class="col-md-4 d-flex justify-content-center">
                     <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
                         onmouseover="this.style.backgroundColor='#a9b9da'"
                         onmouseout="this.style.backgroundColor='#f0f0f0'">
                         <div class="card-body">
                             <h3 class="card-title fs-2" style="color: #003375;">Corsa Hatch 2001</h3>
 
-                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 1.0, 8 válvulas, Econômico, 4 Pneus semi novos</h6>
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 1.0, 8 válvulas, Econômico, 4
+                                Pneus semi novos</h6>
 
                             <div id="carouselFocus9" class="carousel slide mt-3">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="./corsa hatch/corsa hatch 1.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 1">
+                                        <img src="./corsa hatch/corsa hatch 1.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 1">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./corsa hatch/corsa hatch 2.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 2">
+                                        <img src="./corsa hatch/corsa hatch 2.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 2">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./corsa hatch/corsa hatch 3.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 3">
+                                        <img src="./corsa hatch/corsa hatch 3.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 3">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./corsa hatch/corsa hatch 4.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 4">
+                                        <img src="./corsa hatch/corsa hatch 4.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 4">
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="./corsa hatch/corsa hatch 5.jpeg"
-                                            class="d-block w-100 carousel-image" alt="Imagem 5">
+                                        <img src="./corsa hatch/corsa hatch 5.jpeg" class="d-block w-100 carousel-image"
+                                            alt="Imagem 5">
                                     </div>
 
                                 </div>
@@ -552,11 +809,41 @@
                             </div>
 
                             <div class="d-flex justify-content-center">
-                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                                <a href="https://wa.me/+555591562443" target="_blank"><button type="button"
+                                        class="btn btn-primary rounded-pill m-3 btn-lg">Tenho Interesse</button></a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink9()">Copiar link de compartilhamento
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    function compartilharLink9() {
+                        const url = window.location.origin + window.location.pathname + '#corsa-hatch-2001';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Corsa Hatch 2001',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
 
                 <div class="modal fade" id="zoomModal" tabindex="-1" aria-labelledby="zoomModalLabel"
                     aria-hidden="true">
@@ -627,10 +914,23 @@
                 zoomModal.show();
             }
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.classList.add('highlight');
+                    setTimeout(() => {
+                        targetElement.classList.remove('highlight');
+                    }, 2000);
+                }
+            }
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 </html>

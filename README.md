@@ -1,6 +1,6 @@
-# Projeto Landing Page Jr Car
+# Projeto Jr Car
 
-## Um projeto profissional de uma landing page para uma revenda de carros, tecnologias utilizadas: html, css, bootstrap e javascript
+## Um projeto profissional de um site para uma revenda de carros, tecnologias utilizadas: html, css, bootstrap e javascript
 
 
 ![Captura de Tela (117)](https://github.com/user-attachments/assets/384fd269-46ff-4c57-9e53-8b2e1b4f55e2)

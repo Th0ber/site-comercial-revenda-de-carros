@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nós - Jr Car</title>
+    <title>Estoque - Jr Car</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .highlight {
+            animation: highlight-animation 2s ease-in-out;
+        }
+
+        @keyframes highlight-animation {
+            0% {
+                background-color: #a9b9da;
+            }
+
+            100% {
+                background-color: #f0f0f0;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <header>
         <nav class="navbar navbar-expand-sm" style="background-color: #003375;">
@@ -25,24 +41,526 @@
                 <div id="navbarNav" class="navbar-collapse collapse justify-content-center">
                     <ul class="navbar-nav nav-pills">
                         <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ffffff;">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" href="estoque.html" style="color: #ffffff;">Estoque de veículos</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="sobrenos.html" style="color: #ffffff;">Sobre nós</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="estoque.html" style="color: #ffffff;">Estoque de veículos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobrenos.html" style="color: #ffffff;">Sobre nós</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    
+
 
 
     <main class="flex-grow-1">
-        <div class="h2 m-5" style="color: #003375;">Sobre Nós</div>
+        <div class="h2 m-5" style="color: #003375;">Estoque de Veículos</div>
 
-        <div class="h5 m-5" style="color: #003375;">Há 14 anos, a JR Car atua como uma referência em venda de veículos na cidade de Santa Rosa, localizada na Av. Santa Rosa, 876, no centro da cidade. Somos uma das únicas lojas na região que oferece financiamento próprio, sem consulta ao CPF, facilitando o acesso ao seu veículo ideal. Nossos negócios são feitos com 50% de entrada e o saldo em até 24 vezes na promissória – nossa principal forma de venda, que atrai clientes pela praticidade e condições acessíveis.</div>
+        <div class="container">
+            <div class="row">
+                <div id="s10-1997" class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#a9b9da'"
+                        onmouseout="this.style.backgroundColor='#f0f0f0'">
+                        <div class="card-body">
+                            <h3 class="card-title fs-2" style="color: #003375;">S10 1997</h3>
 
-        <img src="jr car 2.jpeg" alt="Jr Car" class="img-fluid">
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 2.2 a gasolina, 8 válvula, 6 lugar, completa</h6>
 
-        <img src="jr car 3.jpeg" alt="Jr Car" class="img-fluid">
+                            <div id="carouselFocus12" class="carousel slide mt-3">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./s10 1997/s10 1997 1.jpeg"
+                                            class="d-block w-100 carousel-image" alt="Imagem 1">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./s10 1997/s10 1997 2.jpeg"
+                                            class="d-block w-100 carousel-image" alt="Imagem 2">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./s10 1997/s10 1997 3.jpeg"
+                                            class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./s10 1997/s10 1997 4.jpeg"
+                                            class="d-block w-100 carousel-image" alt="Imagem 4">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFocus12"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFocus12"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+
+                            <div class="d-flex justify-content-center flex-column">
+                                <a href="https://whatsapp.com" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse - Falar com vendedor</button>
+                                </a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink12()">Copiar link de compartilhamento
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function compartilharLink12() {
+                        const url = window.location.origin + window.location.pathname + '#s10-1997';
+                        if (navigator.share) {
+                            navigator.share({
+                                title: 'Chevrolet S10 1997',
+                                text: 'Confira este carro incrível disponível no nosso site!',
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+
+
+                <div id="captiva-2011" class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#a9b9da'" onmouseout="this.style.backgroundColor='#f0f0f0'">
+                        <div class="card-body">
+                            <h3 class="card-title fs-2" style="color: #003375;">Captiva 2011</h3>
+
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor v6, completa</h6>
+
+                            <div id="carouselFocus10" class="carousel slide mt-3">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./captiva 2011/captiva 2011 1.jpeg" class="d-block w-100 carousel-image" alt="Imagem 1">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./captiva 2011/captiva 2011 2.jpeg" class="d-block w-100 carousel-image" alt="Imagem 2">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./captiva 2011/captiva 2011 3.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./captiva 2011/captiva 2011 4.jpeg" class="d-block w-100 carousel-image" alt="Imagem 4">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./captiva 2011/captiva 2011 5.jpeg" class="d-block w-100 carousel-image" alt="Imagem 5">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFocus10"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFocus10"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+
+                            <div class="d-flex justify-content-center flex-column">
+                                <a href="https://whatsapp.com" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse - Falar com vendedor</button>
+                                </a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink10()">Copiar link de compartilhamento
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function compartilharLink10() {
+                        const url = window.location.origin + window.location.pathname + '#captiva-2011';
+                        if (navigator.share) {
+                            navigator.share({
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+
+
+                <div id="polo-2003" class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#a9b9da'" onmouseout="this.style.backgroundColor='#f0f0f0'">
+                        <div class="card-body">
+                            <h3 class="card-title fs-2" style="color: #003375;">Polo 2003</h3>
+
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 1.6 v8, completo, com suspensão a rosca legalizado baixo</h6>
+
+                            <div id="carouselFocus11" class="carousel slide mt-3">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./polo 2003/polo 2003 1.jpeg" class="d-block w-100 carousel-image" alt="Imagem 1">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./polo 2003/polo 2003 2.jpeg" class="d-block w-100 carousel-image" alt="Imagem 2">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./polo 2003/polo 2003 3.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./polo 2003/polo 2003 4.jpeg" class="d-block w-100 carousel-image" alt="Imagem 4">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./polo 2003/polo 2003 5.jpeg" class="d-block w-100 carousel-image" alt="Imagem 5">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFocus11"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFocus11"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+
+                            <div class="d-flex justify-content-center flex-column">
+                                <a href="https://whatsapp.com" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse - Falar com vendedor</button>
+                                </a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink11()">Copiar link de compartilhamento
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function compartilharLink11() {
+                        const url = window.location.origin + window.location.pathname + '#polo-2003';
+                        if (navigator.share) {
+                            navigator.share({
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+
+
+                <div id="golf-2000" class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#a9b9da'" onmouseout="this.style.backgroundColor='#f0f0f0'">
+                        <div class="card-body">
+                            <h3 class="card-title fs-2" style="color: #003375;">Golf 2000</h3>
+
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Motor 2.0 motor nacional completo</h6>
+
+                            <div id="carouselFocus12" class="carousel slide mt-3">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./golf 2000/golf 2000 1.jpeg" class="d-block w-100 carousel-image" alt="Imagem 1">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./golf 2000/golf 2000 2.jpeg" class="d-block w-100 carousel-image" alt="Imagem 2">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./golf 2000/golf 2000 3.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFocus12"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFocus12"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+
+                            <div class="d-flex justify-content-center flex-column">
+                                <a href="https://whatsapp.com" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse - Falar com vendedor</button>
+                                </a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink12()">Copiar link de compartilhamento
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function compartilharLink12() {
+                        const url = window.location.origin + window.location.pathname + '#golf-2000';
+                        if (navigator.share) {
+                            navigator.share({
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+
+
+                <div id="uno-2011" class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#a9b9da'" onmouseout="this.style.backgroundColor='#f0f0f0'">
+                        <div class="card-body">
+                            <h3 class="card-title fs-2" style="color: #003375;">Uno 2011</h3>
+
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Básico motor 1.0</h6>
+
+                            <div id="carouselFocus13" class="carousel slide mt-3">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./uno 2011/uno 2011 1.jpeg" class="d-block w-100 carousel-image" alt="Imagem 1">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./uno 2011/uno 2011 2.jpeg" class="d-block w-100 carousel-image" alt="Imagem 2">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./uno 2011/uno 2011 3.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./uno 2011/uno 2011 4.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFocus13"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFocus13"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+
+                            <div class="d-flex justify-content-center flex-column">
+                                <a href="https://whatsapp.com" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse - Falar com vendedor</button>
+                                </a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink13()">Copiar link de compartilhamento
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function compartilharLink13() {
+                        const url = window.location.origin + window.location.pathname + '#uno-2011';
+                        if (navigator.share) {
+                            navigator.share({
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+
+
+                <div id="gol-2011" class="col-md-4 d-flex justify-content-center">
+                    <div class="card m-3" style="width: 22rem; transition: background-color 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#a9b9da'" onmouseout="this.style.backgroundColor='#f0f0f0'">
+                        <div class="card-body">
+                            <h3 class="card-title fs-2" style="color: #003375;">Gol 2011</h3>
+
+                            <h6 class="card-subtitle fs-5" style="color: #003375;">Com ar e vidro motor 1.0</h6>
+
+                            <div id="carouselFocus14" class="carousel slide mt-3">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="./gol 2011/gol 2011 1.jpeg" class="d-block w-100 carousel-image" alt="Imagem 1">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./gol 2011/gol 2011 2.jpeg" class="d-block w-100 carousel-image" alt="Imagem 2">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./gol 2011/gol 2011 3.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./gol 2011/gol 2011 4.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="./gol 2011/gol 2011 5.jpeg" class="d-block w-100 carousel-image" alt="Imagem 3">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFocus14"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFocus14"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Próximo</span>
+                                </button>
+                            </div>
+
+                            <div class="d-flex justify-content-center flex-column">
+                                <a href="https://whatsapp.com" target="_blank">
+                                    <button type="button" class="btn btn-primary rounded-pill m-3 btn-lg">Tenho
+                                        Interesse - Falar com vendedor</button>
+                                </a>
+                            </div>
+
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary rounded-pill m-3 btn-lg"
+                                    onclick="compartilharLink14()">Copiar link de compartilhamento
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function compartilharLink14() {
+                        const url = window.location.origin + window.location.pathname + '#gol-2011';
+                        if (navigator.share) {
+                            navigator.share({
+                                url: url
+                            }).then(() => {
+                                console.log('Compartilhamento bem-sucedido');
+                            }).catch(err => {
+                                console.error('Erro ao compartilhar:', err);
+                            });
+                        } else {
+                            navigator.clipboard.writeText(url).then(() => {
+                                alert('Link copiado para a área de transferência!');
+                            }).catch(err => {
+                                console.error('Erro ao copiar o link:', err);
+                            });
+                        }
+                    }
+                </script>
+
+                <div class="modal fade" id="zoomModal" tabindex="-1" aria-labelledby="zoomModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <img id="zoomImage" src="" class="img-fluid" alt="Imagem ampliada">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <a href="https://whatsapp.com/" class="whatsapp-icon" target="_blank" title="Fale conosco no WhatsApp">
@@ -78,6 +596,30 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('carousel-image')) {
+                const zoomImage = document.getElementById('zoomImage');
+                zoomImage.src = event.target.src;
+                const zoomModal = new bootstrap.Modal(document.getElementById('zoomModal'));
+                zoomModal.show();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.classList.add('highlight');
+                    setTimeout(() => {
+                        targetElement.classList.remove('highlight');
+                    }, 2000);
+                }
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
